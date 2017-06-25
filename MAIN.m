@@ -101,14 +101,14 @@ P = Set_Parameters();
     end
 
 %Plot States
-figure(1);
-PlotStates(timeAll, stateAll, P);
+% figure(3);
+% PlotStates(timeAll, stateAll, P);
 
 %Plot Energy
-figure(2);
-PlotEnergy(timeAll, stateAll, P);
+% figure(2);
+% PlotEnergy(timeAll, stateAll, P);
 
 %Animate the solution
-figure(3);
+figure(1);
 Animate(timeAll, stateAll, stateOde, P);
 

@@ -19,7 +19,7 @@ function [y, slope] = groundHeight(x)
     Freq3 = 3.7;
     Phase3 = 1.58;
 
-%Compute the ground height 
+%Compute the ground height
 y = Amp1*sin(Freq1*x+Phase1)+...
     Amp2*sin(Freq2*x+Phase2)+...
     Amp3*sin(Freq3*x+Phase3);
