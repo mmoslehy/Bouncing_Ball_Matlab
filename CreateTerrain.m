@@ -1,4 +1,4 @@
-function createTerrain
+function [pp,ppD] = createTerrain
 figure
 x = [];
 y = [];
@@ -44,5 +44,3 @@ hPlot2.YData = y2;
 coeff = arrayfun(@(x)polyder(pp.coefs(x,:)),2:size(pp.coefs,1)-1,'UniformOutput',false);
 coeff = vertcat(coeff{:});
 ppD = mkpp(pp.breaks,[0 0 0;coeff;0 0 0]);
-
-save ppData pp ppD
