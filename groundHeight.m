@@ -7,7 +7,7 @@ function [y, slope] = groundHeight(x)
 %
 
 %Parameters for each of the three sine ewaves:
-    Amp1 = 0.3;
+    Amp1 = 0.1;
     Freq1 = 1;
     Phase1 = 1.58;
 
@@ -20,13 +20,13 @@ function [y, slope] = groundHeight(x)
     Phase3 = 1.58;
 
 %Compute the ground height
+%     Amp2*sin(Freq2*x+Phase2)+...
 y = Amp1*sin(Freq1*x+Phase1)+...
-    Amp2*sin(Freq2*x+Phase2)+...
     Amp3*sin(Freq3*x+Phase3);
 
 %Compute the ground slope
+%         Amp2*Freq2*cos(Freq2*x+Phase2)+...
 slope = Amp1*Freq1*cos(Freq1*x+Phase1)+...
-        Amp2*Freq2*cos(Freq2*x+Phase2)+...
         Amp3*Freq3*cos(Freq3*x+Phase3);
 
 end

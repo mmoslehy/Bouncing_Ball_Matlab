@@ -72,13 +72,13 @@ while (cpuTime<endTime)
 end
 
 %Plot the points that ode45 returned
-plot(stateOde(1,:),stateOde(2,:),'.r','MarkerSize',ceil(P.PlotBallSize/3));
+% plot(stateOde(1,:),stateOde(2,:),'.r','MarkerSize',ceil(P.PlotBallSize/3));
 
 ylabel('Vertical Position (m)','FontSize',P.LabelFontSize)
 xlabel('Horizontal Position (m)','FontSize',P.LabelFontSize)
 title('Path taken by the ball','fontsize',P.TitleFontSize)
-hLegend = legend('ball','trajectory','ground','ode45 gridpoints');
+% hLegend = legend('ball','trajectory','ground','ode45 gridpoints');
 set(gca,'fontsize',P.AxisFontSize);
-set(hLegend,'fontsize',P.LegendFontSize);
+% set(hLegend,'fontsize',P.LegendFontSize);
 
 end
