@@ -1,4 +1,7 @@
+% Function that takes user mouse clicks and computes polynomial functions
+% of the map.
 function [pp,ppD] = createTerrain
+% Create figure
 figure
 x = [];
 y = [];
@@ -42,5 +45,7 @@ hPlot2.YData = y2;
 
 % Calculate derivative
 coeff = arrayfun(@(x)polyder(pp.coefs(x,:)),2:size(pp.coefs,1)-1,'UniformOutput',false);
+% Parse output into a matrix
 coeff = vertcat(coeff{:});
+% Output the derivatives
 ppD = mkpp(pp.breaks,[0 0 0;coeff;0 0 0]);

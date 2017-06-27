@@ -109,6 +109,6 @@ P = Set_Parameters();
 % PlotEnergy(timeAll, stateAll, P);
 
 %Animate the solution
-figure(1);
+figure;
 Animate(timeAll, stateAll, stateOde, P);
 
