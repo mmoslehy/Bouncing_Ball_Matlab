@@ -24,8 +24,16 @@ P = Set_Parameters();
         dynFunc = @(t,X)Ball_Dynamics(t,X,P);   %Handle for the dynamics function
         TermCond = 'Termination Condition: Max Bounces';  %For display only
         
+%         maxVel = 0;
+        
     %Loop through each section of the trajectory
     for bounceNum=1:maxBounce
+        % Maximum velocity
+%         vel = IC(1);
+%         if(vel > maxVel)
+%             maxVel = vel;
+%         end
+        
         %Run the dynamics until bounce or out of time
         Tspan = [tNow,tEnd];         
         sol = ode45(dynFunc,Tspan,IC,P.Options); %events defined in Options
@@ -47,6 +55,7 @@ P = Set_Parameters();
             TermCond = 'Termination Condition: Ball started rolling';
             break
         end
+        
     end
     disp(TermCond);  %Display the termination condition
 
