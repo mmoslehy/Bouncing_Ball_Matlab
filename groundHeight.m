@@ -24,7 +24,7 @@ function [y, slope] = groundHeight(x)
 % y = Amp1*sin(Freq1*x+Phase1)+...
 %     Amp3*sin(Freq3*x+Phase3);
 
-y = rand(1);
+y = 1+sin(x);
 
 %Compute the ground slope
         
@@ -32,6 +32,6 @@ y = rand(1);
 %         Amp2*Freq2*cos(Freq2*x+Phase2)+...
 %         Amp3*Freq3*cos(Freq3*x+Phase3);
 
-slope = 1;
+slope = cos(x);
 
 end
