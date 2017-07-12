@@ -25,11 +25,11 @@ function P = Set_Parameters()
     %after the collision is larger than this number, then assume that the
     %ball will start rolling. Note- normal and tangential components are
     %measured with respect to the collision surface.
-    P.rollingThreshold = 1e3;
+    P.rollingThreshold = 10;
 
 %% Exit conditions
 % Run until either the maximum number of bounces or the maximum time 
-    P.maxBounce = 6;  %Number of impact events before exit
+    P.maxBounce = 600;  %Number of impact events before exit
     P.maxTime = 25;   %Maximum simulation time
 
 
