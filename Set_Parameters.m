@@ -29,7 +29,7 @@ function P = Set_Parameters()
 
 %% Exit conditions
 % Run until either the maximum number of bounces or the maximum time 
-    P.maxBounce = 600;  %Number of impact events before exit
+    P.maxBounce = 60;  %Number of impact events before exit
     P.maxTime = 25;   %Maximum simulation time
 
 
