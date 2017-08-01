@@ -24,6 +24,7 @@ velIn = stateIn(3:4,:);   %The velocity before the collision
 horizPos = stateIn(1,:);  %The horizontal position of the collision
 
 %Get the slope of the ground at the collision location
+
 [~,groundSlope] = groundHeight(horizPos);   
 
 %Rename the coefficient of restitution

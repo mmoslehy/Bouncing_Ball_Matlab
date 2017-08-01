@@ -19,7 +19,8 @@ function P = Set_Parameters()
     %coefficient of restitution is applied normal to the ground at the
     %point of impact. The tangential component of the velocity is
     %unaffected by the collision. 
-    P.coeff_restitution = 0.95;  
+    %A ball of rubber bands would have a coeff of rest of about 0.828 https://hypertextbook.com/facts/2006/restitution.shtml
+    P.coeff_restitution = 0.828;  
     
     %If the ratio between the tangential and normal components of the ball
     %after the collision is larger than this number, then assume that the
@@ -37,7 +38,7 @@ function P = Set_Parameters()
 
     Pos_X = 0;    %(m) Initial horizontal position of the ball
     Pos_Y = 1.5;  %(m) Initial vertical position of the ball
-    Vel_X = 0;    %(m/s) Initial horizontal speed of the ball
+    Vel_X = 1;    %(m/s) Initial horizontal speed of the ball
     Vel_Y = -1;   %(m/s) Initial vertical speed of the ball
 
     P.initCond = [Pos_X; Pos_Y; Vel_X; Vel_Y];
@@ -48,7 +49,7 @@ function P = Set_Parameters()
                         'AbsTol', 1e-6,...
                         'Events', @EventFunction,...
                         'Vectorized',true,...
-                        'MaxStep',0.1);    
+                        'MaxStep',0.01);    
           %NOTE: We should not need to set MaxStep, but it seems that the
           %event detection in ode45 misses some events when it takes large
           %time steps, if the system dynamics are simple, as is the case

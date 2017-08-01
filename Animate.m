@@ -19,7 +19,7 @@ clf;
     Pos = [xPos;yPos];
 
 %Get the ground shape
-    xGround = linspace(min(xPos),max(xPos),1000);   
+    xGround = linspace(min(xPos),max(xPos),1000); 
     yGround = groundHeight(xGround);
 
 %Get the extents for plotting:
@@ -59,6 +59,8 @@ while (cpuTime<endTime)
     
     %Plot the ground
     plot(xGround,yGround,'k-','LineWidth',P.CurveLineWidth);
+    
+    axis auto
 
     %Annotations
     ylabel('Vertical Position (m)','FontSize',P.LabelFontSize)
