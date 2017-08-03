@@ -42,11 +42,11 @@ while (cpuTime<endTime)
     PosNow = Pos(:,counter);  %Get the current position, based on counter
     
     %Check if the ball has left the screen:
-    if PosNow(2) < Extents(3)
-       %if the ball height is less than the lower part of the plot
-       disp('The ball left the field of view!')
-       break;
-    end
+%     if PosNow(2) < Extents(3)
+%        %if the ball height is less than the lower part of the plot
+%        disp('The ball left the field of view!')
+%        break;
+%     end
     
     %clear the figure
     clf; hold on; axis(Extents); axis equal; axis manual;

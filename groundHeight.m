@@ -14,8 +14,12 @@ for i = 1:size(x,2)
         y(i) = 0.5;    
     elseif (x(i) > 1.5 && x(i) < 2)
         y(i) = 0.25;
+    elseif (x(i) > 2 && x(i) < 2.5)
+        y(i) = 0.125;
+    elseif (x(i) > 2.5 && x(i) < 3)
+        y(i) = 0;        
     else
-        y(i) = 1;
+        y(i) = -0.5;
     end
     
     if (rem(x(i), 1) == 0)
