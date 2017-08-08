@@ -7,7 +7,7 @@ y = x;
 
 for i = 1:size(x,2)
     if(x(i) > -1 && x(i) < 0.5)
-        y(i) = 1;
+        y(i) = 2;
     elseif (x(i) > 0.5 && x(i) < 1)
         y(i) = 0.75;
     elseif (x(i) > 1 && x(i) < 1.5)
@@ -29,15 +29,5 @@ for i = 1:size(x,2)
     end
 end
 
-
-% 
-% if x >= 0 && x <= 3.0756
-%     y = 1 + sin(x+pi());
-% % else
-% %     y = 0.5 + sin(x+pi());
-% end
-
-% slope = eps;
-% slope = cos(x + pi());
 
 end
