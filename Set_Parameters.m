@@ -38,7 +38,7 @@ function P = Set_Parameters()
 
     Pos_X = 0;    %(m) Initial horizontal position of the ball
     Pos_Y = 2;  %(m) Initial vertical position of the ball
-    Vel_X = 6;    %(m/s) Initial horizontal speed of the ball
+    Vel_X = 1;    %(m/s) Initial horizontal speed of the ball
     Vel_Y = -1;   %(m/s) Initial vertical speed of the ball
 
     P.initCond = [Pos_X; Pos_Y; Vel_X; Vel_Y];
