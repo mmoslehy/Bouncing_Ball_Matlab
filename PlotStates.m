@@ -2,17 +2,18 @@ function PlotStates(timeAll, stateAll, P)
     
 clf;
 
+    global time;
+    global xPos;
+    global yPos;
+    global xVel;
+    global yVel;
+    
     %break out the data:
         time = timeAll;
         xPos = stateAll(1,:);
         yPos = stateAll(2,:);
         xVel = stateAll(3,:);
         yVel = stateAll(4,:);
-        
-        yPos(170)
-        yPos(171)
-        time(171)
-        time(172)
         
     subplot(2,2,1)
         plot(time,xPos,'LineWidth',P.CurveLineWidth);
