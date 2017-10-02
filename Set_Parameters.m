@@ -6,7 +6,8 @@ function P = Set_Parameters()
 %% Physical parameters
     P.gravity = 9.81;    %(m/s^2) gravitational acceleration
     P.mass = 0.3;        %(kg) mass of the ball
-    P.drag = 0.02;       %(N*s^2/m^2) quadratic drag coefficient
+%     P.drag = 0.02;       %(N*s^2/m^2) quadratic drag coefficient
+    P.drag = eps; % Keep horizontal speed constant
 
     %NOTE - if the drag is set to negative, then the speed will
     %exponentially increase throughout the simulation, eventually  reaching
