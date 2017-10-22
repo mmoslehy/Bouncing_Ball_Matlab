@@ -31,14 +31,16 @@ function P = Set_Parameters()
 
 %% Exit conditions
 % Run until either the maximum number of bounces or the maximum time 
-    P.maxBounce = 60;  %Number of impact events before exit
-    P.maxTime = 25;   %Maximum simulation time
+%     P.maxBounce = 60;  %Number of impact events before exit
+    P.maxBounce = 600;  %Number of impact events before exit
+%     P.maxTime = 250;   %Maximum simulation time
+    P.maxTime = inf;   %Maximum simulation time
 
 
 %% Initial Conditions:
 
     Pos_X = 0;    %(m) Initial horizontal position of the ball
-    Pos_Y = 2;  %(m) Initial vertical position of the ball
+    Pos_Y = 5;  %(m) Initial vertical position of the ball
     Vel_X = 0.85;    %(m/s) Initial horizontal speed of the ball
     Vel_Y = -1;   %(m/s) Initial vertical speed of the ball
 
@@ -78,5 +80,9 @@ function P = Set_Parameters()
     P.AxisFontSize = 14;
     P.CurveLineWidth = 3;
     P.PlotBallSize = 50;
+    
+    %Set rhythm settings
+    P.seq = [2 2 4 1 3];
+    P.intervalTime = 0.23;
 
 end
