@@ -1,10 +1,9 @@
-function [ heights ] = stairs(P)
+% Returns a struct with [width height]
+function [ heights ] = computeStairs(P)
 
 % Rhythm sequence to map the trajectory to
 seq = P.seq;
 % Initial conditions at the beginning of the trajectory
-Pos_X = P.initCond(1);
-Pos_Y = P.initCond(2);
 Vel_X = P.initCond(3);
 Vel_Y = P.initCond(4);
 
